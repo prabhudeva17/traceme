@@ -8,7 +8,6 @@ file=open("/root/github/traceme/ip.txt","r")
 
 ip=[]
 for i in file.readlines():
-	#print i.strip()
 	ip.append(i.strip())
 #print ip
 
