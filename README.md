@@ -25,7 +25,7 @@ $ sudo -s
 ```
 
 
-### Screenshot
+### traceme
 ![traceme-1](https://user-images.githubusercontent.com/30696072/50225481-abaa8d80-03c6-11e9-9f06-4c83da2c5c8b.png)
 
 ### tracemap
