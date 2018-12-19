@@ -25,13 +25,23 @@ for i in range(len(ip)):
 
 print city,"\n",latitude,"\n",longitude
 
-map=Basemap(projection='mill')
-map.drawmapboundary(fill_color='aqua')
-map.fillcontinents(color='coral',lake_color='aqua')
+map = Basemap(projection='cyl')
+plt.title("WorldMap")
 map.drawcoastlines()
+map.drawmapboundary(fill_color="#7777ff")
+map.fillcontinents(color="#ddaa66",lake_color="#7777ff")
+
+for i in range(len(city)):
+	x,y = map(longitude[i],latitude[i])
+	map.plot(x,y,'g^',markersize=10)
+	plt.text(x,y,city[i],fontsize=6,fontweight='bold',ha='left',va='bottom',color='#8B008B', bbox=dict(facecolor='b', alpha=.1))
 
 x,y = map(longitude,latitude)
-#x,y = map(logitude,latitude)
-map.plot(x,y,marker='^',color='m')
 
+map.plot(x,y,color='r',linewidth=2,label="DataFlow")
+plt.legend(loc=4)
+x,y=map(-170,-82)
+plt.text(x,y,city,fontsize=6,fontweight='bold')
+
+plt.savefig('map.png',dpi=1000,bbox_inches='tight')
 plt.show()

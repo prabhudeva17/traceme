@@ -13,7 +13,7 @@ print "Host:",options.host
 
 ip=open("ip.txt","w")
 ip_addr=[]
-for i in range(1,30):
+for i in range(1,50):
 	icmp=scapy.IP(dst=options.host,ttl=i)/scapy.ICMP()
 	b=scapy.sr1(icmp,timeout=3,verbose=False)
 	if i==1:
