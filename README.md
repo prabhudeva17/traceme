@@ -1,28 +1,43 @@
 # traceme
 
+**traceme** is a python script works similar to traditional traceroute utility, additionaly it will it give the  **Visual traceroute path** in **Google Earth** by using the latitude and longitude value of the ip address from **ip-api.com**. Then create a **KML(Keyhole Markup Language)** file for expressing geographic annotation and visualization within Internet-based, two-dimensional maps and three-dimensional Earth.
+
+3 Process involves in the scripts are:
+- **traceroute**: Get the intermediate IP Address
+- **getlocation**: Get the Geolocation of the IP Address
+- **createKML file** : Get a Keyhole Markup Language suitable to view in Google maps app or web or mobile 
 
 
-traceme is a python script works similar to traditional traceroute utility, it gives the following output
+## Requirements
+- Python 2.7
+- Python pip
+- scapy
+- requests
+- ast
+- simplekml
 
-     -Source IP
-    - Intermediate IP
-    - Destination IP
-    - Time To Live TTL 
 
 ### Installation
 
-traceme requires [python](https://python.org/) v2.7+ to run.
-
-Install the dependencies .
+1. Clone (or download the ZIP) to your computer.
+2. Run as **Root**, Scapy requires Root Privilege to Inject Packet into Network
+3. Run the program using hostname or IP Address as Input 
 
 ```sh
-scapy,requests,ast,basemap,matplotlib
 $ sudo -s
 # git clone https://github.com/prabhudeva17/traceme.git
 # cd traceme
 # ./traceme.py -i wwww.google.com
-#./tracemap.py
 ```
+### How To Use
+1. Using the command line run:
+    `python traceme.py -i <ip-address>`
+               or
+    `./traceme.py -i <ip-address>`
+2. Wait for the program to finish to traceroute.
+3. Wait for the program to create a KML tracemap file 
+4. Open the KML file with  Google Earth or import to Google Maps.
+
 
 
 ### traceme
