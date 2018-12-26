@@ -20,11 +20,14 @@ def traceroute():
 		icmp=scapy.IP(dst=options.host,ttl=i)/scapy.ICMP()
 		b=scapy.sr1(icmp,timeout=3,verbose=False)
 		try:
-		    if i==1:
-			src_ip=b.dst
-			print "\nSource_IP:%s\n"%src_ip
-		except:
-		    pass
+
+			if i==1:
+				src_ip=b.dst
+				print "\nSource_IP:%s\n"%src_ip
+		
+		except AttributeError:
+			pass
+					
 		if b is None:
 			print "TTL=%s \t*****Router Drops the packet*****"%i
 
