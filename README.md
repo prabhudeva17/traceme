@@ -41,10 +41,10 @@
 
 
 ### traceme
-![traceme-1](https://user-images.githubusercontent.com/30696072/50225481-abaa8d80-03c6-11e9-9f06-4c83da2c5c8b.png)
+![screenshot-1](https://user-images.githubusercontent.com/30696072/50468642-f338a700-09ce-11e9-9558-a1f9d43c8a5e.png)
 
 ### tracemap
-![tracemap](https://user-images.githubusercontent.com/30696072/50225594-017f3580-03c7-11e9-8aac-818ae8b8d906.png)
+![screenshot-2](https://user-images.githubusercontent.com/30696072/50468648-03508680-09cf-11e9-91df-900580f55de6.png)
 
 
 ### Development
