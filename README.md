@@ -20,14 +20,14 @@
 ### Installation
 
 1. Clone (or download the ZIP) to your computer.
-2. Run as **Root**, Scapy requires Root Privilege to Inject Packet into Network
-3. Run the program using hostname or IP Address as Input 
+2. Install the requirements package using `sudo -H pip install requirements.txt`
+3. Run as **Root**, Scapy requires Root Privilege to Inject Packet into Network
+4. Run the program using hostname or IP Address as Input 
 
 ```sh
-$ sudo -s
 # git clone https://github.com/prabhudeva17/traceme.git
 # cd traceme
-# ./traceme.py -i wwww.google.com
+# sudo ./traceme.py -i wwww.google.com
 ```
 ### How To Use
 1. Using the command line run:
