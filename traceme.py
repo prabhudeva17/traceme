@@ -19,8 +19,8 @@ def traceroute():
 	for i in range(1,50):
 		icmp=scapy.IP(dst=options.host,ttl=i)/scapy.ICMP()
 		b=scapy.sr1(icmp,timeout=3,verbose=False)
-		try:
 
+		try:#if b.dst is not in Packet in rare case
 			if i==1:
 				src_ip=b.dst
 				print "\nSource_IP:%s\n"%src_ip
@@ -46,6 +46,7 @@ def getlocation():
 	latitude=[]
 	longitude=[]
 	for i in range(len(ipaddr)):
+		#print ipaddr
 		response=requests.get("http://ip-api.com/json/"+ipaddr[i])
 		if "fail" not in response.content:
 			response_dict=ast.literal_eval(response.content)
@@ -54,7 +55,7 @@ def getlocation():
 			longitude.append(response_dict['lon'])
 			#print response.content
 
-	#print city,"\n",latitude,"\n",longitude
+	print "City: \t",city,"\n","Latitude: ",latitude,"\n","Longitude: ",longitude
 	return(city,latitude,longitude)
 
 def createKML(city,longitude,latitude):
@@ -104,7 +105,7 @@ data=getlocation()
 city=data[0]
 latitude=data[1]
 longitude=data[2]
-print "[+]Done!!!\n"
+print "\n[+]Done!!!\n"
 #get data from ip-api the city,latitude,longitude of IP Adresss
 
 print "Creating KML file !!!"
