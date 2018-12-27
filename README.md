@@ -39,6 +39,9 @@
 4. Open the KML file with  Google Earth or import to Google Maps.
 
 
+### DEMO TIME!!
+
+[![0vlx97](https://user-images.githubusercontent.com/30696072/50482781-73cac800-0a0e-11e9-9527-ac331c713029.gif)](https://youtu.be/6WmbnYw03BE)
 
 ### traceme
 ![screenshot-1](https://user-images.githubusercontent.com/30696072/50468642-f338a700-09ce-11e9-9558-a1f9d43c8a5e.png)
